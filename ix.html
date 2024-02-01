@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candies list</title>
+    <link rel="stylesheet" href="pudding.css">
+    <style>
+        .heading>a{
+            color:white;
+            padding-left:90%;
+            font-size: 28px;
+        }
+        .heading>a{
+            font-size: 25px;
+            text-align: right;
+            color:white;
+            flex:none;
+            padding-left:1000px;
+        }
+        .heading>a{
+            padding-left: 1000px;
+        }
+        #result{
+            padding-left:1000px;
+            padding-bottom: 30px;
+        }
+        #rest{
+            padding-left:1000px;
+            padding-bottom: 30px;
+        }
+        .re >button{
+    background:purple;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    width:180px;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+#result>button{
+    background:white;
+                    border:none;
+                    color:purple;
+                    font-size:16px;
+                    font-weight:600;
+                    width:180px;
+                    height:25px;
+                    border-radius:5px;
+                    cursor:pointer;
+                
+
+}
+
+
+    </style>
+    <script src="pudding.js"></script>
+</head>
+<body>
+    
+    <div class="menu">
+        <div class="heading">
+            <h1> Dessert Island</h1>
+            <h3>&mdash;Menu&mdash;</h3>
+            
+            <div id="rest">
+
+            <a href="form.html" style="color:purple; text-decoration: none;">Buy</a></button></div>
+            
+           
+            <div id="result">
+               
+                <button onclick="show();">Cart value</button>
+            </div>
+            <div id="cartvalue">
+                
+            </div>
+           
+        </div>
+        </div>
+    <div class="menu">
+        <div class="heading">
+            <h1> Bake cookies</h1>
+           
+        </div>
+        <div class="food-item" id="item1">
+            <img src="cookies1.jpg">
+            <div class="details">
+                <div class="details-sub">
+                    <h5 id="name">cookies</h5>
+                    <h5 id="price">70</h5>
+                </div>
+                <p> biscuit flavour cookie</p>
+                <button onclick="addtocart('cookies',70);">Add to cart</button>
+                
+            </div>
+            </div>
+            <div class="food-item" id="item2">
+                <img src="cookies2.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5 id="name">twin cookie</h5>
+                        <h6 id="price">250</h6>
+                    </div>
+                    <p> vannila and chocolate dipped cookies</p>
+                    <button onclick="addtocart('twin cookie',250);">Add to cart</button>
+
+                </div>
+    
+            </div>
+            <div class="food-item">
+                <img src="cookies3.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5 id="name">choco cookies</h5>
+                        <h5 id="price">250</h5>
+                    </div>
+                    <p>filled with exiting chocolates chips </p>
+                    <button onclick="addtocart('choco cookies',250);">Add to cart</button>
+                    
+                </div>
+    
+            </div>
+            <div class="food-item">
+                <img src="cookies4.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5 id="name">blueberry cookies</h5>
+                        <h5 id="price">270</h5>
+                    </div>
+                    <p> filled with blueberry syrup</p>
+                    <button onclick="addtocart('blueberry cookies');">Add to cart</button>
+                    
+                </div>
+    
+            </div>
+
+            <div class="food-item">
+                <img src="cookies6.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>colorful cookies</h5>
+                        <h5 class="price">rupees 170</h5>
+                    </div>
+                    <p> christmas cookies</p>
+                    <button onclick="sum(170);">Add to Cart</button>
+                    
+                </div>
+                </div>
+                <div class="food-item">
+                    <img src="cookies.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>custard cookies</h5>
+                            <h5 class="price">rupees 100</h5>
+                        </div>
+                        <p> chocolate and venilla chips filled cookies</p>
+                        <button onclick="sum(100);">Add to Cart</button>
+                       
+                    </div>
+                    </div>
+                    
+        </div>
+        <div class="menu">
+            <div class="heading">
+                <h1> Cake volcano</h1>
+                
+            </div>
+            <div class="food-item">
+                <img src="https://www.hersheyland.com/content/dam/hersheyland/en-us/recipes/recipe-images/2_Hersheys_Perfectly_Chocolate_Cake_11-18.jpeg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Cake</h5>
+                        <h5 class="price">rupees 70</h5>
+                    </div>
+                    <p> chocolate cake with venilla cream </p>
+                    <button onclick="sum(70);">Add to cart</button>
+                    
+                </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://itsybitsykitchen.com/wp-content/uploads/2019/04/white-chocolate-cake-2-2.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Vanilla  cake</h5>
+                            <h5 class="price">rupees 130</h5>
+                        </div>
+                        <p> vanilla dessert</p>
+                        <button onclick="sum(130);">Add to cart</button>
+                       
+                    </div>
+        
+                </div>
+                <div class="food-item">
+                    <img src="https://www.shutterstock.com/image-photo/slice-gourmet-fresh-berry-cake-260nw-741377044.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Raspberry cake</h5>
+                            <h5 class="price">rupees 150</h5>
+                        </div>
+                        <p> Raspberry filled with choc and vanilla filled cake </p>
+                        <button onclick="sum(150);">Add to cart</button>
+                        
+                    </div>
+        
+                </div>
+                <div class="food-item">
+                    <img src="strawberrylayercake.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>strawberry cake</h5>
+                            <h5 class="price">rupees 90</h5>
+                        </div>
+                        <p>  Strawberry cream cake</p>
+                        <button onclick="sum(90);">Add to cart</button>
+                   
+                    </div>
+        
+                </div>
+    
+                <div class="food-item">
+                    <img src="rainbow.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Rainbow Cake</h5>
+                            <h5 class="price">rupees 80</h5>
+                        </div>
+                        <p> colorful cake</p>
+                        <button onclick="sum(80);">Add to cart</button>
+                        
+                    </div>
+                    </div>
+                    <div class="food-item">
+                        <img src="Red-Velvet-Cake.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>Red Velvet</h5>
+                                <h5 class="price">rupees 130</h5>
+                            </div>
+                            <p> redvelvet dessert </p>
+                            <button onclick="sum(130);">Add to cart</button>
+                            
+                        </div>
+                        </div>
+                       
+            </div>
+            <div class="menu">
+                <div class="heading">
+                    <h1> Frozen rainbow</h1>
+                    
+                </div>
+                <div class="food-item">
+                    <img src="https://www.dessertfortwo.com/wp-content/uploads/2012/07/Blueberry-Sorbet-6-360x480.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Blueberry icecream</h5>
+                            <h5 class="price">rupees 120</h5>
+                        </div>
+                        <p> blueberry </p>
+                        <button onclick="sum(120);">Add to cart</button>
+                    
+                    </div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/large/1186_1_1436970676.jpg?tr=w-800,h-1066">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>Chocolate</h5>
+                                <h5 class="price">rupees 100</h5>
+                            </div>
+                            <p> scoops of chocolate </p>
+                            <button onclick="sum(100);">Add to cart</button>
+                    
+                        </div>
+            
+                    </div>
+                    <div class="food-item">
+                        <img src="frozen1.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>strawberry </h5>
+                                <h5 class="price">rupees 250</h5>
+                            </div>
+                            <p> straw berry special </p>
+                            <button onclick="sum(250);">Add to cart</button>
+                            
+                        </div>
+            
+                    </div>
+                    <div class="food-item">
+                        <img src="frozen2.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>special  icecream</h5>
+                                <h5 class="price">rupees 170</h5>
+                            </div>
+                            <p> chocolate chips and biscuit</p>
+                            <button onclick="sum(170);">Add to cart</button>
+                            
+                        </div>
+            
+                    </div>
+        
+                    <div class="food-item">
+                        <img src="frozen3.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>Vanilla icecream</h5>
+                                <h5 class="price">rupees 70</h5>
+                            </div>
+                            <p> vanilla special</p>
+                            <button onclick="sum(70);">Add to cart</button>
+                            
+                        </div>
+                        </div>
+                        <div class="food-item">
+                            <img src="frozen4.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>Choco icecream</h5>
+                                    <h5 class="price">rupees 70</h5>
+                                </div>
+                                <p>choco icecream</p>
+                                <button onclick="sum(70);">Add to cart</button>
+                    
+                            </div>
+                            </div>
+                           
+                </div>
+                <div class="menu">
+                    <div class="heading">
+                        <h1> Pudding overflow</h1>
+                       
+                    </div>
+                    <div class="food-item">
+                        <img src="pudding.jpg">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5>chocolate and vanilla pudding</h5>
+                                <h5 class="price">rupees 90</h5>
+                            </div>
+                            <p> chocolate cake with venilla cream </p>
+                            <button onclick="sum(90);">Add to cart</button>
+                            
+                        </div>
+                        </div>
+                        <div class="food-item">
+                            <img src="pudding2.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>Chocolate caramel pudding</h5>
+                                    <h5 class="price">rupees 120</h5>
+                                </div>
+                                <p> vanilla cream special</p>
+                                <button onclick="sum(120);">Add to cart</button>
+                                
+                            </div>
+                
+                        </div>
+                        <div class="food-item">
+                            <img src="pudding3.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>gelatin pudding</h5>
+                                    <h5 class="price">rupees 300</h5>
+                                </div>
+                                <p> jelly shape  </p>
+                                <button onclick="sum(300);">Add to cart</button>
+                               
+                            </div>
+                
+                        </div>
+                        <div class="food-item">
+                            <img src="pudding4.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>caramel pudding</h5>
+                                    <h5 class="price">rupees 150</h5>
+                                </div>
+                                <p> caramel with honey </p>
+                                <button onclick="sum(150);">Add to cart</button>
+                   
+                            </div>
+                
+                        </div>
+            
+                        <div class="food-item">
+                            <img src="pudding5.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>chocolate pudding</h5>
+                                    <h5 class="price">rupees 120</h5>
+                                </div>
+                                <p> chocolate cake with venilla cream and badam filled special </p>
+                                <button onclick="sum(120);">Add to cart</button>
+                               
+                            </div>
+                            </div>
+                            <div class="food-item">
+                                <img src="pudding6.jpg">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5>cookie pudding</h5>
+                                        <h5 class="price">rupees 180</h5>
+                                    </div>
+                                    <p> chocolate chips with honey cookie pudding </p>
+                                    <button onclick="sum(180);">Add to cart</button>
+                   
+                                </div>
+                                </div>
+                                
+                    </div>
+                    <div class="menu">
+                        <div class="heading">
+                            <h1>Deep-Fried</h1>
+                          
+                        </div>
+                        <div class="food-item">
+                            <img src="fried1.jpg">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5>chocolate roll</h5>
+                                    <h5 class="price">rupees 150</h5>
+                                </div>
+                                <p> chocolate chips with vailla cream </p>
+                                <button onclick="sum(150);">Add to cart</button>
+                                
+                            </div>
+                            </div>
+                            <div class="food-item">
+                                <img src="fried2.jpg">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5>strawberry ball</h5>
+                                        <h5 class="price">rupees 250</h5>
+                                    </div>
+                                    <p> strawberry filled special</p>
+                                    <button onclick="sum(250);">Add to cart</button>
+                                    
+                                </div>
+                    
+                            </div>
+                            <div class="food-item">
+                                <img src="fried3.jpg">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5>chocolate fried</h5>
+                                        <h5 class="price">rupees 200</h5>
+                                    </div>
+                                    <p> chocolate filled special</p>
+                                    <button onclick="sum(200);">Add to cart</button>
+                                    
+                                </div>
+                    
+                            </div>
+                            <div class="food-item">
+                                <img src="fried4.jpg">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5>milk fried</h5>
+                                        <h5 class="price">rupees 230</h5>
+                                    </div>
+                                    <p> milk fried  </p>
+                                    <button onclick="sum(230);">Add to cart</button>
+                                   
+                                </div>
+                    
+                            </div>
+                
+                            <div class="food-item">
+                                <img src="fried5.webp">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5>golab jammu</h5>
+                                        <h5 class="price">rupees 150</h5>
+                                    </div>
+                                    <p> golab jammu</p>
+                                    <button onclick="sum(150);">Add to cart</button>
+                                    
+                                </div>
+                                </div>
+                                <div class="food-item">
+                                    <img src="fried6.jpg">
+                                    <div class="details">
+                                        <div class="details-sub">
+                                            <h5>fried </h5>
+                                            <h5 class="price">rupees 180</h5>
+                                        </div>
+                                        <p> filled with exicting flavours </p>
+                                        <button onclick="sum(180);">Add to cart</button>
+                                       
+                                    </div>
+                                    </div>
+                                 
+                        </div>
+                        <footer>
+                            <address style="text-align: center;font-size: larger;color:purple;font-weight: 600;">
+                                Thadagam road,
+                                coimbatore-13;<br>
+                                contact details:786956347
+                            </address>
+                        </footer>
+</body>
+</html>
